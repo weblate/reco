@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2018-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class StyleManager : Object {
+public class Manager.StyleManager : Object {
     public enum ColorScheme {
         DEFAULT,
         FORCE_LIGHT,
@@ -21,8 +21,8 @@ public class StyleManager : Object {
     }
     private static StyleManager instance = null;
 
-    private Gtk.Settings gtk_settings;
-    private Granite.Settings granite_settings;
+    private unowned Gtk.Settings gtk_settings;
+    private unowned Granite.Settings granite_settings;
 
     private StyleManager () {
     }
